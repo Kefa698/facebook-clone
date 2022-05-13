@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
-
-module.exports = nextConfig
+module.exports = {
+	images: {
+		domains: [
+			'www.facebook.com',
+			'platform-lookaside.fbsbx.com',
+			'firebasestorage.googleapis.com',
+			' media-exp1.licdn.com',
+		],
+	},
+};
