@@ -66,7 +66,7 @@ function Header() {
 					layout="fixed"
 				/>
 				<p className="pr-3 font-semibold whitespace-nowrap">
-					{session.user.name}
+					{session?.user?.name}
 				</p>
 				<ViewGridIcon className="icon" />
 				<ChatIcon className="icon" />
