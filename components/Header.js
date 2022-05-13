@@ -53,14 +53,21 @@ function Header() {
 				{/* profile picture */}
 
 				<img
-					onClick={() => signOut()}
+					onClick={() =>
+						signOut({
+							callbackUrl:
+								'http://localhost:3000/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2F',
+						})
+					}
 					className="rounded-full cursor-pointer"
 					src={session?.user?.image}
 					width={40}
 					height={40}
 					layout="fixed"
 				/>
-
+				<p className="pr-3 font-semibold whitespace-nowrap">
+					{session.user.name}
+				</p>
 				<ViewGridIcon className="icon" />
 				<ChatIcon className="icon" />
 				<BellIcon className="icon" />
