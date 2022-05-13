@@ -18,7 +18,7 @@ import HeaderIcon from './HeaderIcon';
 import { signOut, useSession } from 'next-auth/react';
 function Header() {
 	//to fix later
-	// const [session] = useSession();
+	const { data: session } = useSession();
 	return (
 		<div className="sticky top-0 z-50 flex items-center bg-white shadow-md lg:px-5">
 			{/* left */}
@@ -35,7 +35,7 @@ function Header() {
 						className="flex-shrink hidden ml-2 bg-transparent outline-none md:inline-flex placeholder:gray-500"
 						type="text"
 						placeholder="Search Facebook"
-					></input>
+					/>
 				</div>
 			</div>
 			{/* center */}
@@ -52,15 +52,15 @@ function Header() {
 			<div className="flex items-center justify-end sm:space-x-2">
 				{/* profile picture */}
 
-				{/* <Image
-					onClick={signOut}
+				<img
+					onClick={() => signOut()}
 					className="rounded-full cursor-pointer"
-					src={session.user.image}
+					src={session?.user?.image}
 					width={40}
 					height={40}
 					layout="fixed"
-				/> */}
-				<p className="pr-3 font-semibold whitespace-nowrap">kefaisaboke</p>
+				/>
+
 				<ViewGridIcon className="icon" />
 				<ChatIcon className="icon" />
 				<BellIcon className="icon" />
