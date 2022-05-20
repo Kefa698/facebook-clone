@@ -5,7 +5,7 @@ function SidebarRow({ src, Icon, title }) {
 	return <div className='flex items-center space-x-2 cursor-pointer hover:bg-gray-200 rounded-xl'>
         {src && (
             <Image
-            className='rounded full '
+            className='rounded-full '
             src={src} width={30} height={30}
             layout='fixed'
             />
