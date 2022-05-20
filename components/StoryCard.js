@@ -3,7 +3,7 @@ import React from 'react';
 
 function StoryCard({ name, src, profile }) {
 	return (
-		<div className='relative h-14 w-14'>
+		<div className='relative p-3 cursor-pointer h-14 w-14 md:h-20 md:w-20 lg:h-56 lg:w-32 overflow-x'>
 			<Image
 				className="absolute z-50 rounded-full opacity-0 lg:opacity-100 top-10"
 				src={profile}
