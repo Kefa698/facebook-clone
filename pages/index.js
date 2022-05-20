@@ -2,6 +2,7 @@ import { getSession } from 'next-auth/react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import Login from '../components/Login';
+import Sidebar from '../components/Sidebar';
 
 export default function Home(session) {
 	if (!session) return <Login />;
@@ -13,8 +14,9 @@ export default function Home(session) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Header />
-			<main>
+			<main className='flex'>
 				{/* sidebar */}
+				<Sidebar />
 				{/* feed */}
 				{/* widgets */}
 			</main>
