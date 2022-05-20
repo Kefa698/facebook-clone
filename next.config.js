@@ -9,7 +9,10 @@ module.exports = {
 			'avatars.githubusercontent.com',
 			'https://avatars.githubusercontent.com/u/55787467?v=4',
 			"lh3.googleusercontent.com",
-			"media-exp1.licdn.com"
+			"media-exp1.licdn.com",
+			"www.biography.com",
+			"i.guim.co.uk",
+			"static01.nyt.com",
 		],
 	},
 };
