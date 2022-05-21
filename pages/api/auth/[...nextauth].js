@@ -9,10 +9,12 @@ export default NextAuth({
 		GithubProvider({
 			clientId: process.env.GITHUB_ID,
 			clientSecret: process.env.GITHUB_SECRET,
+			synchronize: false
 		}),
 		GoogleProvider({
 			clientId: process.env.GOOGLE_ID,
 			clientSecret: process.env.GOOGLE_SECRET,
+			synchronize: false
 		}),
 		// FacebookProvider({
 		// 	clientId: process.env.FACEBOOK_ID,
@@ -25,4 +27,6 @@ export default NextAuth({
 	jwt: {
 		secret: process.env.JWT_SECRET,
 	},
+	
+	
 });
