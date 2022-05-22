@@ -1,5 +1,6 @@
 import React from 'react';
 import InputBox from './InputBox';
+import Posts from './Posts';
 import Stories from './Stories';
 
 function Feed() {
@@ -10,7 +11,8 @@ function Feed() {
 				<Stories className="max-w-md mx-auto md:max-w-lg" />
 				
 				<InputBox />
-				{/* posts */}
+			
+				<Posts />
 			</div>
 		</div>
 	);
