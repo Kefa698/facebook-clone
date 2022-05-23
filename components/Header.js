@@ -28,6 +28,7 @@ function Header() {
 					height={40}
 					width={40}
 					layout="fixed"
+					alt=''
 				/>
 				<div className="flex items-center p-2 ml-2 bg-gray-100 rounded-full">
 					<SearchIcon className="w-5 h-5 " />
@@ -52,7 +53,7 @@ function Header() {
 			<div className="flex items-center justify-end sm:space-x-2">
 				{/* profile picture */}
 
-				<img
+				<Image
 					onClick={() =>
 						signOut({
 							callbackUrl:
@@ -64,6 +65,7 @@ function Header() {
 					width={40}
 					height={40}
 					layout="fixed"
+					alt=''
 				/>
 				<p className="pr-3 font-semibold whitespace-nowrap">
 					{session?.user?.name}

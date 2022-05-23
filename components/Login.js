@@ -10,6 +10,7 @@ function Login() {
 				width={400}
 				height={400}
 				objectFit="contain"
+				alt=''
 			/>
 			<h1
 				onClick={() => signIn()}

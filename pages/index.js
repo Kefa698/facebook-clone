@@ -4,8 +4,10 @@ import Feed from '../components/Feed';
 import Header from '../components/Header';
 import Login from '../components/Login';
 import Sidebar from '../components/Sidebar';
+import Widgets from '../components/Widgets';
+import { db } from '../firebase';
 
-export default function Home(session) {
+export default function Home( session,{ posts }) {
 	if (!session) return <Login />;
 	return (
 		<div>
@@ -15,11 +17,10 @@ export default function Home(session) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Header />
-			<main className='flex'>
-				
+			<main className="flex">
 				<Sidebar />
-				<Feed />
-								{/* widgets */}
+				<Feed posts={posts} />
+				<Widgets />
 			</main>
 		</div>
 	);
@@ -28,7 +29,14 @@ export default function Home(session) {
 export async function getServerSideProps(context) {
 	//get user
 	const session = await getSession(context);
+	//db
+	const posts = await db.collection('posts').orderBy('timestamp', 'desc').get();
+	const docs = posts.docs.map((post) => ({
+		id: post.id,
+		...post.data(),
+		timestamp: null,
+	}));
 	return {
-		props: { session },
-	};
+		props: { session, posts: docs },
+	}
 }

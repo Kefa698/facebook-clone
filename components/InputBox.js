@@ -66,7 +66,7 @@ function InputBox() {
 			<div className="flex items-center p-4 space-x-4">
 				<Image
 					className="rounded-full "
-					src={session.user.image}
+					src={session?.user.image}
 					width={40}
 					height={40}
 					layout="fixed"
@@ -77,7 +77,7 @@ function InputBox() {
 						ref={inputRef}
 						className="flex-grow h-12 px-5 bg-gray-100 rounded-full focus:outline-none"
 						type="text"
-						placeholder={`Whats on your mind, ${session.user.name}`}
+						placeholder={`Whats on your mind, ${session?.user.name}`}
 					/>
 					<button hidden onClick={sendPost} type="submit">
 						Submit
