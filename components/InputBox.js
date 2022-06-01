@@ -64,7 +64,7 @@ function InputBox() {
 	return (
 		<div className="p-2 mt-6 font-medium text-gray-500 bg-white shadow-md rounded-2xl">
 			<div className="flex items-center p-4 space-x-4">
-				<Image
+				<img
 					className="rounded-full "
 					src={session?.user.image}
 					width={40}
@@ -86,10 +86,10 @@ function InputBox() {
 				{imageToPost && (
 					<div
 						onClick={removeImage}
-						className="flex flex-col filter hover:brightness-110 transition duration-150 transform hover:scale-105 cursor-pointer"
+						className="flex flex-col transition duration-150 transform cursor-pointer filter hover:brightness-110 hover:scale-105"
 					>
-						<img className="h-10 object-contain" src={imageToPost} alt="" />
-						<p className="text-xs text-red-500 text-center">remove</p>
+						<img className="object-contain h-10" src={imageToPost} alt="" />
+						<p className="text-xs text-center text-red-500">remove</p>
 					</div>
 				)}
 			</div>
@@ -103,7 +103,7 @@ function InputBox() {
 					className="inputIcon"
 				>
 					<CameraIcon className="text-green-300 h-7" />
-					<p className="text-xs sm:text-sm xl:text-base">Live video</p>
+					<p className="text-xs sm:text-sm xl:text-base">upload Image</p>
 					<input
 						ref={filePickerRef}
 						onChange={uploadImage}

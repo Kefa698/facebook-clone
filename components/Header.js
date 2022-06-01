@@ -23,7 +23,7 @@ function Header() {
 		<div className="sticky top-0 z-50 flex items-center bg-white shadow-md lg:px-5">
 			{/* left */}
 			<div className="flex items-center">
-				<Image
+				<img
 					src="https://www.facebook.com/images/fb_icon_325x325.png"
 					height={40}
 					width={40}
@@ -53,7 +53,7 @@ function Header() {
 			<div className="flex items-center justify-end sm:space-x-2">
 				{/* profile picture */}
 
-				<Image
+				<img
 					onClick={() =>
 						signOut({
 							callbackUrl:
